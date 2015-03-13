@@ -12,6 +12,7 @@ use Doctrine\ORM\EntityRepository;
  */
 class ArticleRepository extends EntityRepository
 {
+<<<<<<< HEAD
 	
 	public function myFindAll()
 	{
@@ -22,4 +23,6 @@ class ArticleRepository extends EntityRepository
     	return $results;
 
   }
+=======
+>>>>>>> 19dbb4597b2bc3fda234bc3f121204f5d358bc05
 }
