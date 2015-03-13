@@ -1,0 +1,25 @@
+{% extends "PBBlogBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block pbblog_body %}
+
+  <h2>Liste des articles</h2>
+
+  <ul>
+    {% for article in listArticles %}
+      <li>
+        <a href="{{ path('pb_blog_view', {'id': article.id}) }}">
+          {{ article.title }}
+        </a>
+        par {{ article.author }},
+        le {{ article.date|date('d/m/Y') }}
+      </li>
+    {% else %}
+      <li>Pas (encore !) d'annonces</li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

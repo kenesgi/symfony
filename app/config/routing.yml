@@ -1,0 +1,11 @@
+pb_blog:
+    resource: "@PBBlogBundle/Resources/config/routing.yml"
+    prefix:   /blog
+
+joli_blog:
+    resource: "@JoliBlogBundle/Resources/config/routing.php"
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation
