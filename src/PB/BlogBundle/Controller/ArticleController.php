@@ -19,7 +19,7 @@ class ArticleController extends Controller
     						 ->getRepository('PBBlogBundle:Article');
     						 //->findAll();
   
-  		//$listArticles = $repository->myFindAll();
+  		$listArticles = $repository->myFindAll();
   		
 	return $this->render('PBBlogBundle:Article:index.html.twig', array('listArticles' => $listArticles));
 
