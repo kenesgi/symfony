@@ -1,0 +1,22 @@
+pb_blog_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: PBBlogBundle:Default:index }
+
+pb_blog_home:
+    path:      /{page}
+    defaults:  { _controller: PBBlogBundle:Article:index, page:1 }
+    requirements:
+        page: \d*
+
+    
+pb_blog_view:
+    path:      /article/{id}
+    defaults:  { _controller: PBBlogBundle:Article:view }
+    
+pb_blog_add:
+    path:      /add
+    defaults:  { _controller: PBBlogBundle:Article:add }
+    
+pb_blog_edit:
+    path:      /edit{id}
+    defaults:  { _controller: PBBlogBundle:Article:edit }
